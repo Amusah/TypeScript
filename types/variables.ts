@@ -11,10 +11,19 @@ tvShow = false;
 
 let isFunny = false;
 isFunny = true;
-isFunny = "asd";
+// isFunny = "asd";
 
 
 //*****ANY TYPE******// -- and escape for type checking / turns off type checking
 let thing: any = 'hello';
 thing = 1;
 thing = false;
+
+
+// Scenarios where type annotations are important //
+const movies = ['Arrival', 'The Thing', 'Aliens', 'Amadeus'];
+let foundMovie: string;
+
+for(let movie of movies){
+  if(movie === 'Amadeus') foundMovie = 'Amadeus';
+}
