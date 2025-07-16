@@ -12,3 +12,9 @@ tvShow = false;
 let isFunny = false;
 isFunny = true;
 isFunny = "asd";
+
+
+//*****ANY TYPE******// -- and escape for type checking / turns off type checking
+let thing: any = 'hello';
+thing = 1;
+thing = false;
