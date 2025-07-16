@@ -5,4 +5,4 @@ numCatLives += 1;
 
 let gameOver: boolean = false;
 gameOver = true;
-gameOver = 'true'
+// gameOver = 'true'
