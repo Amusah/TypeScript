@@ -23,3 +23,20 @@ doSomething('Henry', 30, true);
 function salute(person: string = 'Stranger'){
   return `Hi there, ${person}!`;
 }
+
+
+// Return Type Annotations
+function calc(num: number = 99):number { // expected to return a number
+  return num * num;
+}
+
+function mystery(num: number){
+  if(Math.random() < 0.5){
+    return num.toString();
+  }
+  return num;
+}
+
+const add = (x: number, y: number):number => {
+  return x + y;
+}
