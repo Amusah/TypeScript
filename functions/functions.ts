@@ -40,3 +40,9 @@ function mystery(num: number){
 const add = (x: number, y: number):number => {
   return x + y;
 }
+
+const colors = ['red', 'orange', 'yellow'];
+colors.map(colors => {
+  return colors.toUpperCase();
+  // with this anon func, typscript implicitly infers the parameter type
+})
