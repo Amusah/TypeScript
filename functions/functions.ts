@@ -30,6 +30,7 @@ function calc(num: number = 99): number {
 }
 
 function mystery(num: number) {
+  // multiple return types
   if (Math.random() < 0.5) {
     return num.toString();
   }
@@ -40,13 +41,27 @@ const add = (x: number, y: number): number => {
   return x + y;
 };
 
+// implicit type inference of Anon functions
 const colors = ["red", "orange", "yellow"];
 colors.map((colors) => {
   return colors.toUpperCase();
   // with this anon func, typscript implicitly infers the parameter type
 });
 
+//Void type
 function printTwice(msg: string): void {
   console.log(msg);
   console.log(msg);
+}
+
+// Never type (a function that doesn't finish running or returns)
+function makeError(msg: string): never {
+  throw new Error(msg);
+}
+
+// eg. 2
+function gameLoop(): never {
+  while (true) {
+    console.log("game loop running");
+  }
 }
