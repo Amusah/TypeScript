@@ -128,3 +128,47 @@ const christy: CatDog = {
   breed: 'Austrian Shepherd',
   age: 7
 };
+
+
+
+/********************** EXCERCISE **********************/
+// Write the Movie type alias to make the following two variables properly typed
+// Make sure that "originalTitle" is optional and "title" is readonly
+
+type Movie = {
+  readonly title: string;
+  originalTitle?: string;
+  director: string;
+  releaseYear: number;
+  boxOffice: {
+    budget: number;
+    grossUS: number;
+    grossWorldwide: number;
+  }
+}
+
+const dune: Movie = {
+  title: 'Dune',
+  originalTitle: 'Dune Part One',
+  director: 'Denis Villeneuve',
+  releaseYear: 2021,
+  boxOffice: {
+    budget: 165000000,
+    grossUS: 108327834,
+    grossWorldwide: 99898953
+  }
+};
+
+const cats: Movie = {
+  title: 'Cats',
+  director: 'Tom Nerdy',
+  releaseYear: 2019,
+  boxOffice: {
+    budget: 9500000,
+    grossUS: 89989834,
+    grossWorldwide: 93434349,
+  }
+}
+
+// Excercise 2
+const getProfit = (movie : Movie): number => ( movie.boxOffice.grossWorldwide - movie.boxOffice.budget );
