@@ -65,3 +65,18 @@ function gameLoop(): never {
     console.log("game loop running");
   }
 }
+
+
+/*************************** Excercise 1 ***************************/
+function twoFer(person: string = 'you'): string{
+  return `One for ${person}, one for me`
+}
+twoFer('Henry')
+
+
+
+/*************************** Excercise 2 ***************************/
+function isLeapyear(year: number): boolean{
+  return year % 400 === 0 ? true : false;
+}
+isLeapyear(2024);
