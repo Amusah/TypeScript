@@ -21,7 +21,7 @@ const randomCoordinate = (): Point => {
 };
 
 /********************Excess Properties**********************/
-//printName({ first: "Henry", last: "Amusah", age: 30 });
+printName({ first: "Henry", last: "Amusah", age: 30 });
 /* 
   in the code above, the third arguement would have 
   been ignored in Js but not TS however 
@@ -47,14 +47,14 @@ type Song = {
 };
 
 const mySong: Song = {
-  title: 'Adagio molto e cantabile',
-  artist: 'Beethoven',
+  title: "Adagio molto e cantabile",
+  artist: "Beethoven",
   numStreams: 9773323,
   credits: {
-    producer: 'Henry Amusah',
-    writer: 'Ludwig Van Beethoven'
-  }
-}
+    producer: "Henry Amusah",
+    writer: "Ludwig Van Beethoven",
+  },
+};
 
 function calculatePayout(song: Song) {
   return song.numStreams * 0.0033;
@@ -68,3 +68,13 @@ const earnings = calculatePayout(mySong);
 console.log(earnings);
 
 printSong(mySong);
+
+type coorPoint = {
+  x: number;
+  y: number;
+  z?: number;
+};
+
+const myPoint: coorPoint = { x: 1, y: 3}
+
+// the ? symbol makes it optional
