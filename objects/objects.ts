@@ -75,10 +75,9 @@ type coorPoint = {
   z?: number;
 };
 
-const myPoint: coorPoint = { x: 1, y: 3}
+const myPoint: coorPoint = { x: 1, y: 3 };
 
 // the ? symbol makes it optional
-
 
 /*************** The readonly Modifier **************/
 type User = {
@@ -88,8 +87,44 @@ type User = {
 
 const user: User = {
   id: 127849,
-  username: 'Henry'
+  username: "Henry",
 };
 
 console.log(user.id);
-user.id = 83232
+/* user.id = 83232 // invalid */
+
+/**************** Intersection Types ***************/
+type Circle = {
+  radius: number;
+};
+
+type Colorful = {
+  color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "Blue",
+};
+
+// Example 2 // adding on additional types
+type Cat = {
+  numLives: number;
+};
+
+type Dog = {
+  breed: string;
+};
+
+type CatDog = Cat &
+  Dog & {
+    age: number;
+  };
+
+const christy: CatDog = {
+  numLives: 7,
+  breed: 'Austrian Shepherd',
+  age: 7
+};
