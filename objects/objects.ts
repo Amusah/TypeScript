@@ -37,3 +37,34 @@ printName(singer);
 function doublePoint(point: Point): Point {
   return { x: point.x * 2, y: point.y * 2 };
 }
+
+/***************** Nested Object Type Annotation *****************/
+type Song = {
+  title: string;
+  artist: string;
+  numStreams: number;
+  credits: { producer: string; writer: string };
+};
+
+const mySong: Song = {
+  title: 'Adagio molto e cantabile',
+  artist: 'Beethoven',
+  numStreams: 9773323,
+  credits: {
+    producer: 'Henry Amusah',
+    writer: 'Ludwig Van Beethoven'
+  }
+}
+
+function calculatePayout(song: Song) {
+  return song.numStreams * 0.0033;
+}
+
+function printSong(song: Song): void {
+  console.log(`${song.title} - ${song.artist}`);
+}
+
+const earnings = calculatePayout(mySong);
+console.log(earnings);
+
+printSong(mySong);
