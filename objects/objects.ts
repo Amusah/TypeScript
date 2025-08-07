@@ -78,3 +78,18 @@ type coorPoint = {
 const myPoint: coorPoint = { x: 1, y: 3}
 
 // the ? symbol makes it optional
+
+
+/*************** The readonly Modifier **************/
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const user: User = {
+  id: 127849,
+  username: 'Henry'
+};
+
+console.log(user.id);
+user.id = 83232
