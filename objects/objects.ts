@@ -1,6 +1,7 @@
 /****************Object Types****************/
 // Object type annotations //
 
+// type alias
 type Point = {
   x: number;
   y: number;
