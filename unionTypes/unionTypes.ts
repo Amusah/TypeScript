@@ -57,6 +57,47 @@ type DayOfWeek =
 
 // let today: DayOfWeek = 'weds'
 
+/*********************** PART 1 **************************/
+let highScore: number | boolean;
 
+/*********************** PART 2 **************************/
+const stuffs: number[] | string[] = [];
 
+/*********************** PART 3 **************************/
+type SkillLevel = "Beginner" | "Intermediate" | "Advanced" | "Expert";
 
+/************************ PART 4 *************************/
+
+type SkiSchoolStudent = {
+  name: string;
+  age: number;
+  sport: "ski" | "snowboard";
+  level: SkillLevel;
+};
+
+/************************ PART 5 *************************/
+
+type RGB = {
+  r: number;
+  g: number;
+  b: number;
+};
+
+type HSL = {
+  h: number;
+  s: number;
+  l: number;
+};
+
+const colors: (RGB | HSL)[] = [];
+
+/************************ PART 6 *************************/
+const greet = (person: string | string[]): void => {
+  if (typeof person === "string") {
+    console.log(`Hey, ${person}`);
+  } else {
+    for (let p of person) {
+      console.log(`Heya, ${person}`);
+    }
+  }
+};
