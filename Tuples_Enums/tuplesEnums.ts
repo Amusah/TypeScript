@@ -27,7 +27,7 @@ function isDelivered(status: OrderStatus) {
 isDelivered(OrderStatus.RETURNED);
 
 // Stringed Enums
-enum ArrowKeys {
+const enum ArrowKeys {
   UP = "up",
   DOWN = "down",
   LEFT = "left",
