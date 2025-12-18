@@ -1,28 +1,15 @@
-// const person: {
-//   name: string;
-//   age: number;
-//   hobbies: string[]
-// } = {
-
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string]
-} = {
-  name: 'Henry',
-  age: 30,
-  hobbies: ['Sports', 'Cooking'],
-  role: [2, 'author'],
-};
-
-person.role.push('admin');
-
-let favoriteActivities: string[];
-favoriteActivities = ['Sports']
-favoriteActivities = ['Sports'];
-
-console.log(person.name);
-for (const hobby of person.hobbies){
-  console.log(hobby);
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if(typeof input1 === 'number' && typeof input2 === 'number'){
+    result = input1 + input2;
+  } else {
+    result = input1.toString() + input2.toString();
+  }
+  return result;
 }
+
+const combinedAges = combine(30, 26);
+console.log(combinedAges);
+
+const combinedNames = combine('Henry', 'Amusah');
+console.log(combinedNames);
