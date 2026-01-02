@@ -12,3 +12,6 @@ printResult(add(5, 12));
 var combineValues;
 combineValues = add;
 console.log(combineValues(10, 10));
+addAndHandle(10, 12, function (result) {
+    console.log(result);
+});
