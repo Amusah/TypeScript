@@ -4,7 +4,7 @@ class Department {
         this.name = name;
         this.id = id;
         // public name: string; // default tho
-        // private id: string;
+        // private readonly id: string;
         this.employees = [];
         // this.name = n;
     }
@@ -12,6 +12,7 @@ class Department {
         console.log(`Department (${this.id}): ${this.name}`);
     }
     addEmployee(employee) {
+        // this.id = 'd2'
         this.employees.push(employee);
     }
     printEmployeeInformation() {
@@ -23,7 +24,7 @@ const accounting = new Department("d1", "Finance");
 console.log(accounting);
 accounting.description();
 // accounting.employees[0] = 'Selassie';
-accounting.addEmployee('Henry');
+accounting.addEmployee("Henry");
 accounting.printEmployeeInformation();
 // const accountingClone = { name: 'Henry', description: accounting.description }
 // accountingClone.description();
