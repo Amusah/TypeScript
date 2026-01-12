@@ -8,6 +8,12 @@ class Department {
     // this.name = n;
   }
 
+  static fiscalYear = 2020;
+
+  static createEmployee(name: string){
+    return {name: name};
+  }
+
   description(this: Department) {
     console.log(`Department (${this.id}): ${this.name}`);
   }
@@ -31,6 +37,9 @@ class ITDepartment extends Department {
   }
 }
 const IT = new ITDepartment("d2", ["Henry"]);
+
+const employee1 = Department.createEmployee('Henry');
+console.log(employee1, Department.fiscalYear);
 
 console.log(IT);
 IT.description();
