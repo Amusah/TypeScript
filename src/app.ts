@@ -4,14 +4,17 @@ class Department {
   // private employees: string[] = [];
   protected employees: string[] = [];
 
-  constructor(private readonly id: string, public name: string) {
+  constructor(
+    private readonly id: string,
+    public name: string,
+  ) {
     // this.name = n;
   }
 
   static fiscalYear = 2020;
 
-  static createEmployee(name: string){
-    return {name: name};
+  static createEmployee(name: string) {
+    return { name: name };
   }
 
   description(this: Department) {
@@ -38,7 +41,7 @@ class ITDepartment extends Department {
 }
 const IT = new ITDepartment("d2", ["Henry"]);
 
-const employee1 = Department.createEmployee('Henry');
+const employee1 = Department.createEmployee("Henry");
 console.log(employee1, Department.fiscalYear);
 
 console.log(IT);
@@ -52,10 +55,15 @@ IT.printEmployeeInformation();
 // accountingClone.description();
 
 class AccountingDepartment extends Department {
-  constructor(id: string, private reports: string[]) {
+  private constructor(
+    id: string,
+    private reports: string[],
+  ) {
     super(id, "Accounting");
     this.lastReport = reports[0];
   }
+
+  private static instance : AccountingDepartment;
 
   private lastReport: string;
 
@@ -64,6 +72,14 @@ class AccountingDepartment extends Department {
       return this.lastReport;
     }
     throw new Error("No report found");
+  }
+
+  static getInstance(){
+    if(this.instance) {
+      return this.instance;
+    }
+    this.instance = new AccountingDepartment("d1", []);
+    return this.instance;
   }
 
   set mostRecentReport(value: string) {
@@ -90,7 +106,9 @@ class AccountingDepartment extends Department {
   }
 }
 
-const accounting = new AccountingDepartment("d1", []);
+// const accounting = new AccountingDepartment("d1", []); // using private constructor | singleton | static method;
+const accounting = AccountingDepartment.getInstance();
+
 console.log(accounting);
 accounting.description();
 
