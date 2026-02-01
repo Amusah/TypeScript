@@ -8,4 +8,16 @@ user1 = {
         console.log(`${phrase} ${this.name}`);
     },
 };
-user1.greet('Hey y\'all! this is');
+user1.greet("Hey y'all! this is");
+class Person {
+    constructor(n) {
+        this.age = 30;
+        this.name = n;
+    }
+    greet(phrase) {
+        console.log(phrase + ' ' + this.name);
+    }
+}
+let user2;
+user2 = new Person('Max');
+user2.greet("Hey y'all! this is");
