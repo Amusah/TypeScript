@@ -21,3 +21,7 @@ class Person {
 let user2;
 user2 = new Person('Max');
 user2.greet("Hey y'all! this is");
+let add;
+add = (n1, n2) => {
+    return n1 + n2;
+};

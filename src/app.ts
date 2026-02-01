@@ -48,3 +48,15 @@ let user2: Greetable;
 user2 = new Person('Max');
 
 user2.greet("Hey y'all! this is");
+
+
+/********************** Interface as function types***********************/
+interface AddFn {
+  (a: number, b: number): number;
+}
+
+let add: AddFn;
+
+add = (n1: number, n2: number) => {
+  return n1 + n2;
+};
