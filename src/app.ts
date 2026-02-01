@@ -22,10 +22,11 @@ user1 = {
 user1.greet("Hey y'all! this is");
 
 /****************** Using Interface with Classes******************/
-interface Greetable {
-  readonly id: number;
-  name: string;
+interface Named {
+  readonly name: string;
+}
 
+interface Greetable extends Named{
   greet(phrase: string): void;
 }
 
