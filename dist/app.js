@@ -15,11 +15,11 @@ class Person {
         this.name = n;
     }
     greet(phrase) {
-        console.log(phrase + ' ' + this.name);
+        console.log(phrase + " " + this.name);
     }
 }
 let user2;
-user2 = new Person('Max');
+user2 = new Person("Max");
 user2.greet("Hey y'all! this is");
 let add;
 add = (n1, n2) => {
